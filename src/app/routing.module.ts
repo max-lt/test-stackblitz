@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainPage } from './pages/main/main.component';
-import { SecondPage } from './pages/second/second.component';
-import { ThirdPage } from './pages/third/third.component';
+
+import { MainPage } from './pages/main/main.page';
+import { SecondPage } from './pages/second/second.page';
+import { ThirdPage } from './pages/third/third.page';
 
 const routes: Routes = [
   {

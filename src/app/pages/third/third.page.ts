@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './third.component.html',
+  templateUrl: './third.page.html',
 })
 export class ThirdPage {}

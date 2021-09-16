@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './main.component.html',
+  templateUrl: './main.page.html',
 })
 export class MainPage {}
