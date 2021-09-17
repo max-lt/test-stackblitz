@@ -9,3 +9,36 @@ a {
     display: none;
   }
 }
+
+h2 {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  text-align: center;
+  position: relative;
+  color: #45505b;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  &::before {
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+
+  &::after {
+    width: 40px;
+    height: 3px;
+    background: #0563bb;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+}
