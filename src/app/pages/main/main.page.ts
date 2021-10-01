@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Observable, scan } from "rxjs";
-import { FirebaseService } from "src/services/firebase.service";
-import { IMessage } from "src/services/firebase.service";
+import { IMessage } from "src/services/message.service";
+import { MessageService } from "src/services/message.service";
 
 @Component({
   templateUrl: "./main.page.html",
@@ -10,14 +10,14 @@ import { IMessage } from "src/services/firebase.service";
 export class MainPage {
   public messages$: Observable<IMessage[]>;
 
-  constructor(private firebase: FirebaseService) {
-    this.messages$ = firebase.messages$.pipe(
+  constructor(private messageService: MessageService) {
+    this.messages$ = messageService.messages$.pipe(
       scan((acc, value) => (acc.push(value), acc), [] as Array<IMessage>)
     );
   }
 
   public onSubmit(msg: any) {
     console.log("POST", msg);
-    this.firebase.postMessage(msg);
+    this.messageService.postMessage(msg);
   }
 }
