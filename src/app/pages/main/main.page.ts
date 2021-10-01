@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Observable, scan } from "rxjs";
-import { IMessage } from "src/services/message.service";
-import { MessageService } from "src/services/message.service";
+import { IMessage } from "../../../services/message.service";
+import { MessageService } from "../../../services/message.service";
 
 @Component({
   templateUrl: "./main.page.html",
