@@ -5,3 +5,20 @@
 <br />
 
 <a routerLink="/third">go to third page</a>
+
+<div class="message" *ngFor="let message of messages$ | async">
+  <div [id]="message.id">
+    {{ message.user }}: {{ message.message }}
+    <br>
+    à {{ message.date | date:'short' }}
+  </div>
+</div>
+
+<div *ngIf="{ user: '', message: '' } as data">
+  <form (ngSubmit)="onSubmit(data)">
+    <input type="text" placeholder="username" [(ngModel)]="data.user"/>
+    <input type="text" placeholder="message" [(ngModel)]="data.message"/>
+
+    <button type="submit">Post</button>
+  </form>
+</div>
